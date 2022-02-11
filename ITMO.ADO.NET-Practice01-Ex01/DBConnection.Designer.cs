@@ -33,6 +33,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.ToolStripMenuItemConnectToDB = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItemDisconnectFromDB = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItemOpenAsyncConnectionToBD = new System.Windows.Forms.ToolStripMenuItem();
+			this.ToolStripMenuItemListOfConnections = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStripWorkWithDB.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -41,7 +42,8 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.menuStripWorkWithDB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemConnectToDB,
             this.ToolStripMenuItemDisconnectFromDB,
-            this.ToolStripMenuItemOpenAsyncConnectionToBD});
+            this.ToolStripMenuItemOpenAsyncConnectionToBD,
+            this.ToolStripMenuItemListOfConnections});
 			this.menuStripWorkWithDB.Location = new System.Drawing.Point(0, 0);
 			this.menuStripWorkWithDB.Name = "menuStripWorkWithDB";
 			this.menuStripWorkWithDB.Size = new System.Drawing.Size(800, 24);
@@ -69,6 +71,13 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.ToolStripMenuItemOpenAsyncConnectionToBD.Text = "Асинхронное подключение к БД";
 			this.ToolStripMenuItemOpenAsyncConnectionToBD.Click += new System.EventHandler(this.ToolStripMenuItemOpenAsyncConnectionToBD_Click);
 			// 
+			// ToolStripMenuItemListOfConnections
+			// 
+			this.ToolStripMenuItemListOfConnections.Name = "ToolStripMenuItemListOfConnections";
+			this.ToolStripMenuItemListOfConnections.Size = new System.Drawing.Size(142, 20);
+			this.ToolStripMenuItemListOfConnections.Text = "Список Подключений";
+			this.ToolStripMenuItemListOfConnections.Click += new System.EventHandler(this.ToolStripMenuItemListOfConnections_Click);
+			// 
 			// DBConnection
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +100,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemConnectToDB;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemDisconnectFromDB;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemOpenAsyncConnectionToBD;
+		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemListOfConnections;
 	}
 }
 
