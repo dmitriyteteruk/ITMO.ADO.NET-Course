@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice01-Ex01-02-03-04-05-DBConnection", "ITMO.ADO.NET-Practice01-Ex01\ITMO.ADO.NET-Practice01-Ex01-02-03-04-05-DBConnection.csproj", "{03E4A2D7-A255-4CB8-9C6A-1F7017D45256}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03E4A2D7-A255-4CB8-9C6A-1F7017D45256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E4A2D7-A255-4CB8-9C6A-1F7017D45256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E4A2D7-A255-4CB8-9C6A-1F7017D45256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E4A2D7-A255-4CB8-9C6A-1F7017D45256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {959E4FAF-F533-4B37-BDB2-5A43E7389800}
+	EndGlobalSection
+EndGlobal
