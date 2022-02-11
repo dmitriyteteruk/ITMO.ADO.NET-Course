@@ -35,9 +35,6 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 		string connectionString = GetConnectionStringByName("DBConnect.NorthwindConnectionString");	 // обращение к App.config 
 
 		SqlConnection connection = new SqlConnection();
-//		string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=True";
-
-
 
 
 		// действие по нажатию кнопки подключиться к БД
@@ -97,7 +94,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			}
 		}
 
-		// обработчик сообытия StateChange - делает ненужные пункты меню недоступными
+		// действие при StateChange - делает ненужные пункты меню недоступными
 		private void Connection_StateChange(object sender, StateChangeEventArgs e)
 		{
 			ToolStripMenuItemConnectToDB.Enabled = (e.CurrentState == ConnectionState.Closed);
@@ -113,7 +110,8 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			{
 				foreach (ConnectionStringSettings cs in settings)
 				{
-					string str = String.Format("Name = {0}\nProviderName = {1}\nConnectionString = {2}", cs.Name, cs.ProviderName, cs.ConnectionString); MessageBox.Show(str, "Параметры подключений");
+					string str = String.Format("Name = {0}\nProviderName = {1}\nConnectionString = {2}", cs.Name, cs.ProviderName, cs.ConnectionString); 
+					MessageBox.Show(str, "Параметры подключений");
 				}
 			}
 		}
