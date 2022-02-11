@@ -53,15 +53,15 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			// ToolStripMenuItemConnectToDB
 			// 
 			this.ToolStripMenuItemConnectToDB.Name = "ToolStripMenuItemConnectToDB";
-			this.ToolStripMenuItemConnectToDB.Size = new System.Drawing.Size(122, 20);
-			this.ToolStripMenuItemConnectToDB.Text = "Подключится к БД";
+			this.ToolStripMenuItemConnectToDB.Size = new System.Drawing.Size(128, 20);
+			this.ToolStripMenuItemConnectToDB.Text = "Подключиться к БД";
 			this.ToolStripMenuItemConnectToDB.Click += new System.EventHandler(this.ToolStripMenuItemConnectToDB_Click);
 			// 
 			// ToolStripMenuItemDisconnectFromDB
 			// 
 			this.ToolStripMenuItemDisconnectFromDB.Name = "ToolStripMenuItemDisconnectFromDB";
-			this.ToolStripMenuItemDisconnectFromDB.Size = new System.Drawing.Size(120, 20);
-			this.ToolStripMenuItemDisconnectFromDB.Text = "Отключится от БД";
+			this.ToolStripMenuItemDisconnectFromDB.Size = new System.Drawing.Size(126, 20);
+			this.ToolStripMenuItemDisconnectFromDB.Text = "Отключиться от БД";
 			this.ToolStripMenuItemDisconnectFromDB.Click += new System.EventHandler(this.ToolStripMenuItemDisconnectFromDB_Click);
 			// 
 			// ToolStripMenuItemOpenAsyncConnectionToBD
