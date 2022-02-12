@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ITMO.ADO.NET_Practice01_Ex01.Properties {
+namespace ITMO.ADO.NET_Practice01_02.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

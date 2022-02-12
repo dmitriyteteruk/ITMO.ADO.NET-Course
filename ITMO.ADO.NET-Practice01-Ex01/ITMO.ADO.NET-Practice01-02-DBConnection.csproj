@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{03E4A2D7-A255-4CB8-9C6A-1F7017D45256}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ITMO.ADO.NET_Practice01_Ex01</RootNamespace>
-    <AssemblyName>ITMO.ADO.NET-Practice01-Ex01-04</AssemblyName>
+    <RootNamespace>ITMO.ADO.NET_Practice01_02</RootNamespace>
+    <AssemblyName>ITMO.ADO.NET-Practice01-02</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

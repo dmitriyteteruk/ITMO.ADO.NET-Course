@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ITMO.ADO.NET-Practice01-Ex01")]
+[assembly: AssemblyTitle("ITMO.ADO.NET-Practice01-02")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ITMO.ADO.NET-Practice01-Ex01")]
+[assembly: AssemblyProduct("ITMO.ADO.NET-Practice01-02")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
