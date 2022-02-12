@@ -20,7 +20,6 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 		{
 			InitializeComponent();
 			this.connection.StateChange += new StateChangeEventHandler(this.Connection_StateChange);
-
 		}
 
 		public static string GetConnectionStringByName(string name)
@@ -154,6 +153,31 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			catch (SqlException ex)
 			{
 				MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		// вызов запрос к БД с отображением в Listview
+		private void buttonGetListOfProducts_Click(object sender, EventArgs e)
+		{
+			using (SqlConnection connection = new SqlConnection(connectionString))
+			{
+				try
+				{
+					SqlCommand command = new SqlCommand("USE [Northwind] SELECT [ProductName], [UnitPrice], [QuantityPerUnit] FROM [dbo].[Products]", connection);
+					connection.Open();
+					SqlDataReader reader = command.ExecuteReader();
+					while (reader.Read())
+					{
+						ListViewItem newItem = 
+						listViewProducts.Items.Add(reader["ProductName"].ToString());
+						newItem.SubItems.Add(reader.GetDecimal(1).ToString());
+						newItem.SubItems.Add(reader["QuantityPerUnit"].ToString());
+					}
+				}
+				catch (SqlException ex)
+				{
+					MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
 			}
 		}
 	}

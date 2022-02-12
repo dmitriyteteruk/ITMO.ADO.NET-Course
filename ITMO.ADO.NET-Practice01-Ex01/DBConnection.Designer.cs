@@ -38,6 +38,11 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.labelResultOfHowManyProducts = new System.Windows.Forms.Label();
 			this.buttonInvokeWorkWithDataBaseMethod = new System.Windows.Forms.Button();
 			this.labelResultFromClass = new System.Windows.Forms.Label();
+			this.buttonGetListOfProducts = new System.Windows.Forms.Button();
+			this.listViewProducts = new System.Windows.Forms.ListView();
+			this.columnHeaderProductName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeaderUnitPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeaderQuantiryPerUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.menuStripWorkWithDB.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -118,11 +123,52 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.labelResultFromClass.Size = new System.Drawing.Size(0, 13);
 			this.labelResultFromClass.TabIndex = 4;
 			// 
+			// buttonGetListOfProducts
+			// 
+			this.buttonGetListOfProducts.Location = new System.Drawing.Point(12, 163);
+			this.buttonGetListOfProducts.Name = "buttonGetListOfProducts";
+			this.buttonGetListOfProducts.Size = new System.Drawing.Size(146, 23);
+			this.buttonGetListOfProducts.TabIndex = 5;
+			this.buttonGetListOfProducts.Text = "Список продуктов";
+			this.buttonGetListOfProducts.UseVisualStyleBackColor = true;
+			this.buttonGetListOfProducts.Click += new System.EventHandler(this.buttonGetListOfProducts_Click);
+			// 
+			// listViewProducts
+			// 
+			this.listViewProducts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderProductName,
+            this.columnHeaderUnitPrice,
+            this.columnHeaderQuantiryPerUnit});
+			this.listViewProducts.HideSelection = false;
+			this.listViewProducts.Location = new System.Drawing.Point(177, 163);
+			this.listViewProducts.Name = "listViewProducts";
+			this.listViewProducts.Size = new System.Drawing.Size(529, 170);
+			this.listViewProducts.TabIndex = 6;
+			this.listViewProducts.UseCompatibleStateImageBehavior = false;
+			this.listViewProducts.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeaderProductName
+			// 
+			this.columnHeaderProductName.Text = "Название продукта";
+			this.columnHeaderProductName.Width = 218;
+			// 
+			// columnHeaderUnitPrice
+			// 
+			this.columnHeaderUnitPrice.Text = "Цена";
+			this.columnHeaderUnitPrice.Width = 135;
+			// 
+			// columnHeaderQuantiryPerUnit
+			// 
+			this.columnHeaderQuantiryPerUnit.Text = "Фасовка";
+			this.columnHeaderQuantiryPerUnit.Width = 103;
+			// 
 			// DBConnection
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.listViewProducts);
+			this.Controls.Add(this.buttonGetListOfProducts);
 			this.Controls.Add(this.labelResultFromClass);
 			this.Controls.Add(this.buttonInvokeWorkWithDataBaseMethod);
 			this.Controls.Add(this.labelResultOfHowManyProducts);
@@ -149,6 +195,11 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 		private System.Windows.Forms.Label labelResultOfHowManyProducts;
 		private System.Windows.Forms.Button buttonInvokeWorkWithDataBaseMethod;
 		private System.Windows.Forms.Label labelResultFromClass;
+		private System.Windows.Forms.Button buttonGetListOfProducts;
+		private System.Windows.Forms.ListView listViewProducts;
+		private System.Windows.Forms.ColumnHeader columnHeaderProductName;
+		private System.Windows.Forms.ColumnHeader columnHeaderUnitPrice;
+		private System.Windows.Forms.ColumnHeader columnHeaderQuantiryPerUnit;
 	}
 }
 
