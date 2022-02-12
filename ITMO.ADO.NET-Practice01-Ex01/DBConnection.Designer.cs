@@ -34,6 +34,10 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.ToolStripMenuItemDisconnectFromDB = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItemOpenAsyncConnectionToBD = new System.Windows.Forms.ToolStripMenuItem();
 			this.ToolStripMenuItemListOfConnections = new System.Windows.Forms.ToolStripMenuItem();
+			this.buttonHowManyProducts = new System.Windows.Forms.Button();
+			this.labelResultOfHowManyProducts = new System.Windows.Forms.Label();
+			this.buttonInvokeWorkWithDataBaseMethod = new System.Windows.Forms.Button();
+			this.labelResultFromClass = new System.Windows.Forms.Label();
 			this.menuStripWorkWithDB.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -78,11 +82,51 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.ToolStripMenuItemListOfConnections.Text = "Список Подключений";
 			this.ToolStripMenuItemListOfConnections.Click += new System.EventHandler(this.ToolStripMenuItemListOfConnections_Click);
 			// 
+			// buttonHowManyProducts
+			// 
+			this.buttonHowManyProducts.Location = new System.Drawing.Point(12, 47);
+			this.buttonHowManyProducts.Name = "buttonHowManyProducts";
+			this.buttonHowManyProducts.Size = new System.Drawing.Size(146, 23);
+			this.buttonHowManyProducts.TabIndex = 1;
+			this.buttonHowManyProducts.Text = "Сколько продуктов";
+			this.buttonHowManyProducts.UseVisualStyleBackColor = true;
+			this.buttonHowManyProducts.Click += new System.EventHandler(this.buttonHowManyProducts_Click);
+			// 
+			// labelResultOfHowManyProducts
+			// 
+			this.labelResultOfHowManyProducts.AutoSize = true;
+			this.labelResultOfHowManyProducts.Location = new System.Drawing.Point(196, 52);
+			this.labelResultOfHowManyProducts.Name = "labelResultOfHowManyProducts";
+			this.labelResultOfHowManyProducts.Size = new System.Drawing.Size(0, 13);
+			this.labelResultOfHowManyProducts.TabIndex = 2;
+			// 
+			// buttonInvokeWorkWithDataBaseMethod
+			// 
+			this.buttonInvokeWorkWithDataBaseMethod.Location = new System.Drawing.Point(13, 96);
+			this.buttonInvokeWorkWithDataBaseMethod.Name = "buttonInvokeWorkWithDataBaseMethod";
+			this.buttonInvokeWorkWithDataBaseMethod.Size = new System.Drawing.Size(145, 45);
+			this.buttonInvokeWorkWithDataBaseMethod.TabIndex = 3;
+			this.buttonInvokeWorkWithDataBaseMethod.Text = "Сколько продуктов (через отдельный класс)";
+			this.buttonInvokeWorkWithDataBaseMethod.UseVisualStyleBackColor = true;
+			this.buttonInvokeWorkWithDataBaseMethod.Click += new System.EventHandler(this.buttonInvokeWorkWithDataBaseMethod_Click);
+			// 
+			// labelResultFromClass
+			// 
+			this.labelResultFromClass.AutoSize = true;
+			this.labelResultFromClass.Location = new System.Drawing.Point(184, 112);
+			this.labelResultFromClass.Name = "labelResultFromClass";
+			this.labelResultFromClass.Size = new System.Drawing.Size(0, 13);
+			this.labelResultFromClass.TabIndex = 4;
+			// 
 			// DBConnection
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.labelResultFromClass);
+			this.Controls.Add(this.buttonInvokeWorkWithDataBaseMethod);
+			this.Controls.Add(this.labelResultOfHowManyProducts);
+			this.Controls.Add(this.buttonHowManyProducts);
 			this.Controls.Add(this.menuStripWorkWithDB);
 			this.MainMenuStrip = this.menuStripWorkWithDB;
 			this.Name = "DBConnection";
@@ -101,6 +145,10 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemDisconnectFromDB;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemOpenAsyncConnectionToBD;
 		private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemListOfConnections;
+		private System.Windows.Forms.Button buttonHowManyProducts;
+		private System.Windows.Forms.Label labelResultOfHowManyProducts;
+		private System.Windows.Forms.Button buttonInvokeWorkWithDataBaseMethod;
+		private System.Windows.Forms.Label labelResultFromClass;
 	}
 }
 

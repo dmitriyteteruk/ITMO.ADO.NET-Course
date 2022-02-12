@@ -115,5 +115,46 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 				}
 			}
 		}
+
+		// практика 2, упражнение 1. Получение скалярного значения
+		// дейсивме по нажати кнопки для получения данных из базы
+		private void buttonHowManyProducts_Click(object sender, EventArgs e)
+		{
+			if(connection.State == ConnectionState.Closed)
+			{
+				MessageBox.Show("Сначала подключитесь к БД");
+			}
+
+			using (connection)         // практика 2, упражнение 1. Использование USING для автоматического закрытия подключения при завершении программы
+			{
+				SqlCommand command = new SqlCommand();
+				command.Connection = connection;
+				command.CommandText = "USE [Northwind] SELECT COUNT(*) FROM [dbo].[Products]"; // передаем запрос SQL серверу 
+				try
+				{
+					int number = (int)command.ExecuteScalar();
+					labelResultOfHowManyProducts.Text = number.ToString();
+				}
+				catch (SqlException ex)
+				{
+					MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+			
+		}
+
+		// вызов запрос отдельным классом
+		private void buttonInvokeWorkWithDataBaseMethod_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				int number = WorkWithDataBase.ExecuteScalarMethod(connectionString, "USE [Northwind] SELECT COUNT(*) FROM [dbo].[Products]");
+				labelResultFromClass.Text = number.ToString();
+			}
+			catch (SqlException ex)
+			{
+				MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 	}
 }
