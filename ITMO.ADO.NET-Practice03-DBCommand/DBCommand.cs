@@ -87,5 +87,28 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 
 			}
 		}
+
+		private void buttonInvokeStoredProcedure_Click(object sender, EventArgs e)
+		{
+			StringBuilder results = new StringBuilder(); 
+			using (sqlConnectionToLocalDB)
+			{
+				try
+				{
+					sqlConnectionToLocalDB.Open(); 
+					SqlDataReader reader = sqlCommandInvokeStoredProcedure.ExecuteReader();
+						while (reader.Read()) 
+						{ 
+							for (int i = 0; i < reader.FieldCount; i++) 
+								{ 
+									results.Append(reader[i].ToString() + "\t"); 
+								} 
+									results.Append(Environment.NewLine); }
+					
+					textBoxResultStoredProcedure.Text = results.ToString();
+				}
+				catch (SqlException ex) { MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			}
+		}
 	}
 }

@@ -35,6 +35,9 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			this.sqlConnectionToLocalDB = new System.Data.SqlClient.SqlConnection();
 			this.buttonPacketQuery = new System.Windows.Forms.Button();
 			this.textBoxResultPacketQuery = new System.Windows.Forms.TextBox();
+			this.buttonInvokeStoredProcedure = new System.Windows.Forms.Button();
+			this.sqlCommandInvokeStoredProcedure = new System.Data.SqlClient.SqlCommand();
+			this.textBoxResultStoredProcedure = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// sqlCommandWorkWithDB
@@ -84,11 +87,38 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			this.textBoxResultPacketQuery.Size = new System.Drawing.Size(400, 124);
 			this.textBoxResultPacketQuery.TabIndex = 3;
 			// 
+			// buttonInvokeStoredProcedure
+			// 
+			this.buttonInvokeStoredProcedure.Location = new System.Drawing.Point(13, 304);
+			this.buttonInvokeStoredProcedure.Name = "buttonInvokeStoredProcedure";
+			this.buttonInvokeStoredProcedure.Size = new System.Drawing.Size(137, 23);
+			this.buttonInvokeStoredProcedure.TabIndex = 4;
+			this.buttonInvokeStoredProcedure.Text = "Вызов процедуры";
+			this.buttonInvokeStoredProcedure.UseVisualStyleBackColor = true;
+			this.buttonInvokeStoredProcedure.Click += new System.EventHandler(this.buttonInvokeStoredProcedure_Click);
+			// 
+			// sqlCommandInvokeStoredProcedure
+			// 
+			this.sqlCommandInvokeStoredProcedure.CommandText = "Ten Most Expensive Products";
+			this.sqlCommandInvokeStoredProcedure.CommandType = System.Data.CommandType.StoredProcedure;
+			this.sqlCommandInvokeStoredProcedure.Connection = this.sqlConnectionToLocalDB;
+			// 
+			// textBoxResultStoredProcedure
+			// 
+			this.textBoxResultStoredProcedure.Location = new System.Drawing.Point(181, 306);
+			this.textBoxResultStoredProcedure.Multiline = true;
+			this.textBoxResultStoredProcedure.Name = "textBoxResultStoredProcedure";
+			this.textBoxResultStoredProcedure.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBoxResultStoredProcedure.Size = new System.Drawing.Size(400, 107);
+			this.textBoxResultStoredProcedure.TabIndex = 5;
+			// 
 			// DBCommand
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(800, 508);
+			this.Controls.Add(this.textBoxResultStoredProcedure);
+			this.Controls.Add(this.buttonInvokeStoredProcedure);
 			this.Controls.Add(this.textBoxResultPacketQuery);
 			this.Controls.Add(this.buttonPacketQuery);
 			this.Controls.Add(this.textBoxResultFromQuery);
@@ -108,6 +138,9 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 		private System.Windows.Forms.TextBox textBoxResultFromQuery;
 		private System.Windows.Forms.Button buttonPacketQuery;
 		private System.Windows.Forms.TextBox textBoxResultPacketQuery;
+		private System.Windows.Forms.Button buttonInvokeStoredProcedure;
+		private System.Data.SqlClient.SqlCommand sqlCommandInvokeStoredProcedure;
+		private System.Windows.Forms.TextBox textBoxResultStoredProcedure;
 	}
 }
 
