@@ -53,12 +53,13 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			StringBuilder results = new StringBuilder();
 			using (sqlConnectionToLocalDB)
 			{
-				sqlCommandWorkWithDB.CommandText = "USE [Northwind] SELECT CustomerID, CompanyName FROM [dbo].[Customers];" + "SELECT ProductName, UnitPrice, QuantityPerUnit FROM [dbo].[Products];";
+				sqlCommandWorkWithDB.CommandText = "USE [Northwind] SELECT ProductName, UnitPrice, QuantityPerUnit FROM [dbo].[Products];" + "USE [Northwind] SELECT CustomerID, CompanyName FROM [dbo].[Customers];";
 
 				try
 				{
 					sqlConnectionToLocalDB.Open();
 					SqlDataReader reader = sqlCommandWorkWithDB.ExecuteReader();
+					
 					bool MoreResults = false;
 
 					do
@@ -71,6 +72,8 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 							}
 							results.Append(Environment.NewLine);
 						}
+						MoreResults = reader.NextResult();
+
 					} while (MoreResults);
 
 					textBoxResultPacketQuery.Text = results.ToString();
