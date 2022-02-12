@@ -43,6 +43,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.columnHeaderProductName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeaderUnitPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeaderQuantiryPerUnit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.buttonTransaction = new System.Windows.Forms.Button();
 			this.menuStripWorkWithDB.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -142,7 +143,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			this.listViewProducts.HideSelection = false;
 			this.listViewProducts.Location = new System.Drawing.Point(177, 163);
 			this.listViewProducts.Name = "listViewProducts";
-			this.listViewProducts.Size = new System.Drawing.Size(529, 170);
+			this.listViewProducts.Size = new System.Drawing.Size(433, 127);
 			this.listViewProducts.TabIndex = 6;
 			this.listViewProducts.UseCompatibleStateImageBehavior = false;
 			this.listViewProducts.View = System.Windows.Forms.View.Details;
@@ -155,18 +156,29 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 			// columnHeaderUnitPrice
 			// 
 			this.columnHeaderUnitPrice.Text = "Цена";
-			this.columnHeaderUnitPrice.Width = 135;
+			this.columnHeaderUnitPrice.Width = 87;
 			// 
 			// columnHeaderQuantiryPerUnit
 			// 
 			this.columnHeaderQuantiryPerUnit.Text = "Фасовка";
-			this.columnHeaderQuantiryPerUnit.Width = 103;
+			this.columnHeaderQuantiryPerUnit.Width = 119;
+			// 
+			// buttonTransaction
+			// 
+			this.buttonTransaction.Location = new System.Drawing.Point(13, 302);
+			this.buttonTransaction.Name = "buttonTransaction";
+			this.buttonTransaction.Size = new System.Drawing.Size(145, 23);
+			this.buttonTransaction.TabIndex = 7;
+			this.buttonTransaction.Text = "Транзакция";
+			this.buttonTransaction.UseVisualStyleBackColor = true;
+			this.buttonTransaction.Click += new System.EventHandler(this.buttonTransaction_Click);
 			// 
 			// DBConnection
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.buttonTransaction);
 			this.Controls.Add(this.listViewProducts);
 			this.Controls.Add(this.buttonGetListOfProducts);
 			this.Controls.Add(this.labelResultFromClass);
@@ -200,6 +212,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 		private System.Windows.Forms.ColumnHeader columnHeaderProductName;
 		private System.Windows.Forms.ColumnHeader columnHeaderUnitPrice;
 		private System.Windows.Forms.ColumnHeader columnHeaderQuantiryPerUnit;
+		private System.Windows.Forms.Button buttonTransaction;
 	}
 }
 

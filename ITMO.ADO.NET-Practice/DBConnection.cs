@@ -180,5 +180,37 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 				}
 			}
 		}
+
+		// практика 2, упраженение 03.
+		// выполнение транзакции по нажатию на кнопку Транзакция 
+		private void buttonTransaction_Click(object sender, EventArgs e)
+		{
+			 using (SqlConnection connection = new SqlConnection(connectionString))
+			{
+				connection.Open();
+				SqlTransaction sqlTran = connection.BeginTransaction();
+				SqlCommand command = connection.CreateCommand();
+				command.Transaction = sqlTran;
+				try
+				{
+					command.CommandText = "USE [Northwind] INSERT INTO [Products] ([ProductName], [UnitPrice], [QuantityPerUnit]) VALUES('Wrong size', 12, '1 boxes')"; command.ExecuteNonQuery();
+					command.CommandText = "USE [Northwind] INSERT INTO[Products] ([ProductName], [UnitPrice], [QuantityPerUnit]) VALUES('Wrong color', 25, '100 ml')"; command.ExecuteNonQuery();
+					sqlTran.Commit();
+					MessageBox.Show("Строки записаны в базу данных");
+				}
+				catch (SqlException ex)
+				{
+					MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					try
+					{
+						sqlTran.Rollback();
+					}
+					catch (Exception exRollback)
+					{
+						MessageBox.Show(exRollback.Message);
+					}
+				}
+			}
+		}
 	}
 }

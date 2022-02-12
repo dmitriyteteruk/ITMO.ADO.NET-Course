@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ITMO.ADO.NET_Practice01_02.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ITMO.ADO.NET_Practice03_DBCommand.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="LocalDB" Type="System.String" Scope="User">

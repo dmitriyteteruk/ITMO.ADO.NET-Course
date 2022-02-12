@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ITMO.ADO.NET_Practice01_02.Properties {
+namespace ITMO.ADO.NET_Practice03_DBCommand.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
