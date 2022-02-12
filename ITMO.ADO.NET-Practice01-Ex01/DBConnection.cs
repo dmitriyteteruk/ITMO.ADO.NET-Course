@@ -169,8 +169,8 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 					while (reader.Read())
 					{
 						ListViewItem newItem = 
-						listViewProducts.Items.Add(reader["ProductName"].ToString());
-						newItem.SubItems.Add(reader.GetDecimal(1).ToString());
+						listViewProducts.Items.Add(reader["ProductName"].ToString());	// считывание по названию столбца
+						newItem.SubItems.Add(reader.GetDecimal(1).ToString());			// считывание по индексу столбца, без преобразования
 						newItem.SubItems.Add(reader["QuantityPerUnit"].ToString());
 					}
 				}
