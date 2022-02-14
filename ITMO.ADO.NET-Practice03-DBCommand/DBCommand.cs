@@ -110,5 +110,49 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 				catch (SqlException ex) { MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 			}
 		}
+		// запрос на создание таблицы
+		private void buttonCreateTable_Click(object sender, EventArgs e)
+		{
+			using (sqlConnectionToLocalDB) 
+			{ 
+				sqlCommandCreateTable.CommandText = "USE [Northwind] CREATE TABLE SalesPersons (" + "[SalesPersonID] [int] IDENTITY(1,1) NOT NULL, " + "[FirstName] [nvarchar](50) NULL, " + "[LastName] [nvarchar](50) NULL);";
+				try {
+					sqlConnectionToLocalDB.Open(); 
+					sqlCommandCreateTable.ExecuteNonQuery(); 
+					MessageBox.Show("Таблица SalesPersons создана"); 
+					} 
+				catch (SqlException ex) 
+					{ 
+					MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+					} 
+			}
+		}
+
+		// запрос 
+		private void buttonQueryWithParameters_Click(object sender, EventArgs e)
+		{
+			StringBuilder results = new StringBuilder(); 
+			try
+			{
+
+				sqlCommandQueryWithParameters.Parameters["@City"].Value = textBoxCity.Text;
+				sqlConnectionToLocalDB.Open(); 
+				SqlDataReader reader = sqlCommandQueryWithParameters.ExecuteReader();
+				while (reader.Read()) 
+					{ 
+						for (int i = 0; i < reader.FieldCount; i++) 
+						{ 
+							results.Append(reader[i].ToString() + "\t"); 
+						} 
+					results.Append(Environment.NewLine); 
+				}
+				textBoxResultQueryWithParmeters.Text = results.ToString();
+			}
+			catch (SqlException ex)
+			{	
+				MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			finally { sqlConnectionToLocalDB.Close(); }
+		}
 	}
 }
