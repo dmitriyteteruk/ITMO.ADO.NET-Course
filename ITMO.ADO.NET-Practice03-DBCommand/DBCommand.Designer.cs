@@ -44,6 +44,11 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			this.textBoxCity = new System.Windows.Forms.TextBox();
 			this.sqlCommandQueryWithParameters = new System.Data.SqlClient.SqlCommand();
 			this.textBoxResultQueryWithParmeters = new System.Windows.Forms.TextBox();
+			this.buttonCallSpWithParameters = new System.Windows.Forms.Button();
+			this.textBoxCategoryName = new System.Windows.Forms.TextBox();
+			this.textBoxOrdYear = new System.Windows.Forms.TextBox();
+			this.sqlCommandCallSpWithParameters = new System.Data.SqlClient.SqlCommand();
+			this.textBoxResultCallSpWithParameters = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// sqlCommandWorkWithDB
@@ -167,11 +172,60 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			this.textBoxResultQueryWithParmeters.Size = new System.Drawing.Size(400, 50);
 			this.textBoxResultQueryWithParmeters.TabIndex = 9;
 			// 
+			// buttonCallSpWithParameters
+			// 
+			this.buttonCallSpWithParameters.Location = new System.Drawing.Point(12, 417);
+			this.buttonCallSpWithParameters.Name = "buttonCallSpWithParameters";
+			this.buttonCallSpWithParameters.Size = new System.Drawing.Size(137, 40);
+			this.buttonCallSpWithParameters.TabIndex = 10;
+			this.buttonCallSpWithParameters.Text = "Процедура с параметрами";
+			this.buttonCallSpWithParameters.UseVisualStyleBackColor = true;
+			this.buttonCallSpWithParameters.Click += new System.EventHandler(this.buttonCallSpWithParameters_Click);
+			// 
+			// textBoxCategoryName
+			// 
+			this.textBoxCategoryName.Location = new System.Drawing.Point(181, 417);
+			this.textBoxCategoryName.Name = "textBoxCategoryName";
+			this.textBoxCategoryName.Size = new System.Drawing.Size(116, 20);
+			this.textBoxCategoryName.TabIndex = 11;
+			this.textBoxCategoryName.Text = "Beverages";
+			// 
+			// textBoxOrdYear
+			// 
+			this.textBoxOrdYear.Location = new System.Drawing.Point(325, 417);
+			this.textBoxOrdYear.Name = "textBoxOrdYear";
+			this.textBoxOrdYear.Size = new System.Drawing.Size(129, 20);
+			this.textBoxOrdYear.TabIndex = 12;
+			this.textBoxOrdYear.Text = "1997";
+			// 
+			// sqlCommandCallSpWithParameters
+			// 
+			this.sqlCommandCallSpWithParameters.CommandText = "SalesByCategory";
+			this.sqlCommandCallSpWithParameters.CommandType = System.Data.CommandType.StoredProcedure;
+			this.sqlCommandCallSpWithParameters.Connection = this.sqlConnectionToLocalDB;
+			this.sqlCommandCallSpWithParameters.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.ReturnValue, false, ((byte)(0)), ((byte)(0)), "", System.Data.DataRowVersion.Current, null),
+            new System.Data.SqlClient.SqlParameter("@CategoryName", System.Data.SqlDbType.NVarChar, 15),
+            new System.Data.SqlClient.SqlParameter("@OrdYear", System.Data.SqlDbType.NVarChar, 4)});
+			// 
+			// textBoxResultCallSpWithParameters
+			// 
+			this.textBoxResultCallSpWithParameters.Location = new System.Drawing.Point(181, 454);
+			this.textBoxResultCallSpWithParameters.Multiline = true;
+			this.textBoxResultCallSpWithParameters.Name = "textBoxResultCallSpWithParameters";
+			this.textBoxResultCallSpWithParameters.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.textBoxResultCallSpWithParameters.Size = new System.Drawing.Size(400, 70);
+			this.textBoxResultCallSpWithParameters.TabIndex = 13;
+			// 
 			// DBCommand
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(595, 508);
+			this.ClientSize = new System.Drawing.Size(595, 632);
+			this.Controls.Add(this.textBoxResultCallSpWithParameters);
+			this.Controls.Add(this.textBoxOrdYear);
+			this.Controls.Add(this.textBoxCategoryName);
+			this.Controls.Add(this.buttonCallSpWithParameters);
 			this.Controls.Add(this.textBoxResultQueryWithParmeters);
 			this.Controls.Add(this.textBoxCity);
 			this.Controls.Add(this.buttonQueryWithParameters);
@@ -206,6 +260,11 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 		private System.Windows.Forms.TextBox textBoxCity;
 		private System.Data.SqlClient.SqlCommand sqlCommandQueryWithParameters;
 		private System.Windows.Forms.TextBox textBoxResultQueryWithParmeters;
+		private System.Windows.Forms.Button buttonCallSpWithParameters;
+		private System.Windows.Forms.TextBox textBoxCategoryName;
+		private System.Windows.Forms.TextBox textBoxOrdYear;
+		private System.Data.SqlClient.SqlCommand sqlCommandCallSpWithParameters;
+		private System.Windows.Forms.TextBox textBoxResultCallSpWithParameters;
 	}
 }
 

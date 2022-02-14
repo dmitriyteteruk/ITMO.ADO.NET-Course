@@ -128,7 +128,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			}
 		}
 
-		// запрос 
+		// запрос в БД с паратмерами
 		private void buttonQueryWithParameters_Click(object sender, EventArgs e)
 		{
 			StringBuilder results = new StringBuilder(); 
@@ -153,6 +153,38 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 				MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			finally { sqlConnectionToLocalDB.Close(); }
+		}
+
+		// вызов хранимой процедуры с параметрами
+		private void buttonCallSpWithParameters_Click(object sender, EventArgs e)
+		{
+			StringBuilder results = new StringBuilder(); try
+			{
+				sqlCommandCallSpWithParameters.Parameters["@CategoryName"].Value = textBoxCategoryName.Text;
+				sqlCommandCallSpWithParameters.Parameters["@OrdYear"].Value = textBoxOrdYear.Text;
+				sqlConnectionToLocalDB.Open(); 
+				
+				SqlDataReader reader = sqlCommandCallSpWithParameters.ExecuteReader();
+				while (reader.Read()) 
+				{ 
+					for (int i = 0; i < reader.FieldCount; i++) 
+						{ 
+							results.Append(reader[i].ToString() + "\t"); 
+						} 
+					results.Append(Environment.NewLine); 
+				}
+				textBoxResultCallSpWithParameters.Text = results.ToString();
+			}
+			
+			catch (SqlException ex) 
+				{ 
+					MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+				}
+			
+			finally 
+				{ 
+					sqlConnectionToLocalDB.Close(); 
+				}
 		}
 	}
 }

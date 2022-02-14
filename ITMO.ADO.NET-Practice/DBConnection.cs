@@ -45,10 +45,10 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 				{
 					connection.ConnectionString = connectionString;
 					connection.Open();
-					MessageBox.Show("Соединение с БД " + connection.Database + " выполненено успешно." + "\nСервер: " + connection.DataSource);
+					MessageBox.Show("Соединение с БД " + connection.Database + " выполнено успешно." + "\nСервер: " + connection.DataSource);
 				}
 				else
-					MessageBox.Show("Соединенеи с БД уже установлено");
+					MessageBox.Show("Соединение с БД уже установлено");
 			}
 
 			catch (SqlException XcpSQL)
@@ -82,10 +82,10 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 				{
 					connection.ConnectionString = connectionString;
 					await connection.OpenAsync();
-					MessageBox.Show("Соединение с БД " + connection.Database + " выполненено успешно." + "\nСервер: " + connection.DataSource);
+					MessageBox.Show("Соединение с БД " + connection.Database + " выполнено успешно." + "\nСервер: " + connection.DataSource);
 				}
 				else
-					MessageBox.Show("Соединенеи с БД уже установлено");
+					MessageBox.Show("Соединение с БД уже установлено");
 			}
 			catch  (Exception Xcp)
 			{
