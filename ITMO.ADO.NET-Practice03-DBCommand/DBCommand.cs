@@ -18,6 +18,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			InitializeComponent();
 		}
 
+		// просто запрос на получение всей таблицы
 		private void buttonQueryData_Click(object sender, EventArgs e)
 		{
 			StringBuilder results = new StringBuilder();
@@ -48,6 +49,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			}
 		}
 
+		// пакетный запрос
 		private void buttonPacketQuery_Click(object sender, EventArgs e)
 		{
 			StringBuilder results = new StringBuilder();
@@ -88,6 +90,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			}
 		}
 
+		// вызов хранимой процедуры
 		private void buttonInvokeStoredProcedure_Click(object sender, EventArgs e)
 		{
 			StringBuilder results = new StringBuilder(); 
@@ -128,7 +131,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			}
 		}
 
-		// запрос в БД с паратмерами
+		// запрос в БД с параметрами
 		private void buttonQueryWithParameters_Click(object sender, EventArgs e)
 		{
 			StringBuilder results = new StringBuilder(); 

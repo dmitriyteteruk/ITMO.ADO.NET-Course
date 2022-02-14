@@ -53,6 +53,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			// 
 			// sqlCommandWorkWithDB
 			// 
+			this.sqlCommandWorkWithDB.CommandText = "SELECT        CustomerID, CompanyName\r\nFROM            Customers";
 			this.sqlCommandWorkWithDB.Connection = this.sqlConnectionToLocalDB;
 			// 
 			// sqlConnectionToLocalDB
