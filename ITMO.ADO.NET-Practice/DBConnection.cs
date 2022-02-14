@@ -116,7 +116,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 		}
 
 		// практика 2, упражнение 1. Получение скалярного значения
-		// дейсивме по нажати кнопки для получения данных из базы
+		// действие по нажатию кнопки для получения данных из базы
 		private void buttonHowManyProducts_Click(object sender, EventArgs e)
 		{
 			if(connection.State == ConnectionState.Closed)
