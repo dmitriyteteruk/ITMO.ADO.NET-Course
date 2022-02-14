@@ -13,6 +13,9 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 {
 	public partial class DBCommand : Form
 	{
+
+		//static SqlConnection sqlConnectionToLocalDB;
+		
 		public DBCommand()
 		{
 			InitializeComponent();
@@ -131,7 +134,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			}
 		}
 
-		// запрос в БД с параметрами
+		// запрос в БД с параметрами (без using)
 		private void buttonQueryWithParameters_Click(object sender, EventArgs e)
 		{
 			StringBuilder results = new StringBuilder(); 
@@ -158,10 +161,11 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			finally { sqlConnectionToLocalDB.Close(); }
 		}
 
-		// вызов хранимой процедуры с параметрами
+		// вызов хранимой процедуры с параметрами (без using)
 		private void buttonCallSpWithParameters_Click(object sender, EventArgs e)
 		{
-			StringBuilder results = new StringBuilder(); try
+			StringBuilder results = new StringBuilder(); 
+			try
 			{
 				sqlCommandCallSpWithParameters.Parameters["@CategoryName"].Value = textBoxCategoryName.Text;
 				sqlCommandCallSpWithParameters.Parameters["@OrdYear"].Value = textBoxOrdYear.Text;

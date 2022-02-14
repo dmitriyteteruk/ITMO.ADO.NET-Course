@@ -16,6 +16,7 @@ namespace ITMO.ADO.NET_Practice01_Ex01
 	public partial class DBConnection : Form
 	{
 		
+		
 		public DBConnection()          // конструктор формы DBConnection
 		{
 			InitializeComponent();

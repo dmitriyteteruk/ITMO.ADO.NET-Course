@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice01-02-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice03-DBCommand", "ITMO.ADO.NET-Practice03-DBCommand\ITMO.ADO.NET-Practice03-DBCommand.csproj", "{67787816-627A-464F-8A69-50A069025993}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04.DatasetDesigner", "ITMO.ADO.NET-Practice04.DatasetDesigner\ITMO.ADO.NET-Practice04.DatasetDesigner.csproj", "{ACB5044F-0DE7-49AC-AC06-8774952BC574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04-CreatingDataTable", "ITMO.ADO.NET-Practice04-CreatingDataTable\ITMO.ADO.NET-Practice04-CreatingDataTable.csproj", "{9AE4FE9D-E778-42D9-A928-B97F324DDD0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{67787816-627A-464F-8A69-50A069025993}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67787816-627A-464F-8A69-50A069025993}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67787816-627A-464F-8A69-50A069025993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB5044F-0DE7-49AC-AC06-8774952BC574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB5044F-0DE7-49AC-AC06-8774952BC574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB5044F-0DE7-49AC-AC06-8774952BC574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB5044F-0DE7-49AC-AC06-8774952BC574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE4FE9D-E778-42D9-A928-B97F324DDD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE4FE9D-E778-42D9-A928-B97F324DDD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE4FE9D-E778-42D9-A928-B97F324DDD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE4FE9D-E778-42D9-A928-B97F324DDD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

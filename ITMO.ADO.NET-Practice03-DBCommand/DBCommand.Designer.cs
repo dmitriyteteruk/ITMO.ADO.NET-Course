@@ -30,7 +30,6 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 		private void InitializeComponent()
 		{
 			this.sqlCommandWorkWithDB = new System.Data.SqlClient.SqlCommand();
-			this.sqlConnectionToLocalDB = new System.Data.SqlClient.SqlConnection();
 			this.buttonQueryData = new System.Windows.Forms.Button();
 			this.textBoxResultFromQuery = new System.Windows.Forms.TextBox();
 			this.buttonPacketQuery = new System.Windows.Forms.Button();
@@ -49,17 +48,13 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			this.textBoxOrdYear = new System.Windows.Forms.TextBox();
 			this.sqlCommandCallSpWithParameters = new System.Data.SqlClient.SqlCommand();
 			this.textBoxResultCallSpWithParameters = new System.Windows.Forms.TextBox();
+			this.sqlConnectionToLocalDB = new System.Data.SqlClient.SqlConnection();
 			this.SuspendLayout();
 			// 
 			// sqlCommandWorkWithDB
 			// 
 			this.sqlCommandWorkWithDB.CommandText = "SELECT        CustomerID, CompanyName\r\nFROM            Customers";
 			this.sqlCommandWorkWithDB.Connection = this.sqlConnectionToLocalDB;
-			// 
-			// sqlConnectionToLocalDB
-			// 
-			this.sqlConnectionToLocalDB.ConnectionString = global::ITMO.ADO.NET_Practice03_DBCommand.Properties.Settings.Default.LocalDB;
-			this.sqlConnectionToLocalDB.FireInfoMessageEventOnUserErrors = false;
 			// 
 			// buttonQueryData
 			// 
@@ -218,6 +213,12 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 			this.textBoxResultCallSpWithParameters.Size = new System.Drawing.Size(400, 70);
 			this.textBoxResultCallSpWithParameters.TabIndex = 13;
 			// 
+			// sqlConnectionToLocalDB
+			// 
+			this.sqlConnectionToLocalDB.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=" +
+    "True";
+			this.sqlConnectionToLocalDB.FireInfoMessageEventOnUserErrors = false;
+			// 
 			// DBCommand
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,8 +246,6 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 		}
 
 		#endregion
-
-		private System.Data.SqlClient.SqlConnection sqlConnectionToLocalDB;
 		private System.Data.SqlClient.SqlCommand sqlCommandWorkWithDB;
 		private System.Windows.Forms.Button buttonQueryData;
 		private System.Windows.Forms.TextBox textBoxResultFromQuery;
@@ -266,6 +265,7 @@ namespace ITMO.ADO.NET_Practice03_DBCommand
 		private System.Windows.Forms.TextBox textBoxOrdYear;
 		private System.Data.SqlClient.SqlCommand sqlCommandCallSpWithParameters;
 		private System.Windows.Forms.TextBox textBoxResultCallSpWithParameters;
+		private System.Data.SqlClient.SqlConnection sqlConnectionToLocalDB;
 	}
 }
 
