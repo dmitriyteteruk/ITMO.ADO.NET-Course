@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace ITMO.ADO.NET_Practice03_DBCommand
+namespace ITMO.ADO.NET_Practice03_DBCommand	//
 {
 	public partial class DBCommand : Form
 	{
