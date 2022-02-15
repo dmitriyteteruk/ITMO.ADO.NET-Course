@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04-Cre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04-DataAdapterProgram", "ITMO.ADO.NET-Practice04-DataAdapterProgram\ITMO.ADO.NET-Practice04-DataAdapterProgram.csproj", "{4AF4371F-166E-4BBC-B8DB-7EDBA6843E9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-04-DataAdapterWizard", "ITMO.ADO.NET-Practice-04-DataAdapterWizard\ITMO.ADO.NET-Practice-04-DataAdapterWizard.csproj", "{65FB3B47-90E2-44CA-8D43-BF1ACECA860C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4AF4371F-166E-4BBC-B8DB-7EDBA6843E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AF4371F-166E-4BBC-B8DB-7EDBA6843E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AF4371F-166E-4BBC-B8DB-7EDBA6843E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65FB3B47-90E2-44CA-8D43-BF1ACECA860C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FB3B47-90E2-44CA-8D43-BF1ACECA860C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FB3B47-90E2-44CA-8D43-BF1ACECA860C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FB3B47-90E2-44CA-8D43-BF1ACECA860C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
