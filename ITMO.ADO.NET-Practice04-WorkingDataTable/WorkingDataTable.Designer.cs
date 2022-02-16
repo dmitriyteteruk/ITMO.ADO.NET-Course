@@ -263,7 +263,6 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 			this.textBoxOriginalDRV.ReadOnly = true;
 			this.textBoxOriginalDRV.Size = new System.Drawing.Size(189, 20);
 			this.textBoxOriginalDRV.TabIndex = 9;
-			this.textBoxOriginalDRV.Visible = false;
 			// 
 			// textBoxRowState
 			// 
