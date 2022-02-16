@@ -33,11 +33,11 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 			this.dataGridViewCustomersData = new System.Windows.Forms.DataGridView();
 			this.buttonFillTable = new System.Windows.Forms.Button();
 			this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+			this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
 			this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
 			this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
 			this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
 			this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-			this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
 			this.dataSetNorthwind = new ITMO.ADO.NET_Practice04_WorkingDataTable.DataSet1();
 			this.buttonAddRow = new System.Windows.Forms.Button();
 			this.buttonDeleteRow = new System.Windows.Forms.Button();
@@ -48,6 +48,10 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 			this.textBoxCurrentDRV = new System.Windows.Forms.TextBox();
 			this.textBoxOriginalDRV = new System.Windows.Forms.TextBox();
 			this.textBoxRowState = new System.Windows.Forms.TextBox();
+			this.labelCellCurrentValue = new System.Windows.Forms.Label();
+			this.labelCellOriginalValue = new System.Windows.Forms.Label();
+			this.labelCurrentValue = new System.Windows.Forms.Label();
+			this.labelCellStatus = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersData)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSetNorthwind)).BeginInit();
 			this.SuspendLayout();
@@ -75,6 +79,12 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 			// 
 			this.sqlSelectCommand1.CommandText = "SELECT * FROM Customers";
 			this.sqlSelectCommand1.Connection = this.sqlConnection1;
+			// 
+			// sqlConnection1
+			// 
+			this.sqlConnection1.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=" +
+    "True";
+			this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
 			// 
 			// sqlInsertCommand1
 			// 
@@ -176,12 +186,6 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
                         new System.Data.Common.DataColumnMapping("Fax", "Fax")})});
 			this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
 			// 
-			// sqlConnection1
-			// 
-			this.sqlConnection1.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=" +
-    "True";
-			this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
-			// 
 			// dataSetNorthwind
 			// 
 			this.dataSetNorthwind.DataSetName = "DataSetNorthwind";
@@ -239,37 +243,77 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 			// 
 			// textBoxCellValue
 			// 
-			this.textBoxCellValue.Location = new System.Drawing.Point(383, 376);
+			this.textBoxCellValue.Location = new System.Drawing.Point(556, 376);
 			this.textBoxCellValue.Name = "textBoxCellValue";
-			this.textBoxCellValue.Size = new System.Drawing.Size(165, 20);
+			this.textBoxCellValue.Size = new System.Drawing.Size(189, 20);
 			this.textBoxCellValue.TabIndex = 7;
 			// 
 			// textBoxCurrentDRV
 			// 
-			this.textBoxCurrentDRV.Location = new System.Drawing.Point(383, 431);
+			this.textBoxCurrentDRV.Location = new System.Drawing.Point(556, 431);
 			this.textBoxCurrentDRV.Name = "textBoxCurrentDRV";
-			this.textBoxCurrentDRV.Size = new System.Drawing.Size(165, 20);
+			this.textBoxCurrentDRV.Size = new System.Drawing.Size(189, 20);
 			this.textBoxCurrentDRV.TabIndex = 8;
 			// 
 			// textBoxOriginalDRV
 			// 
-			this.textBoxOriginalDRV.Location = new System.Drawing.Point(383, 402);
+			this.textBoxOriginalDRV.Location = new System.Drawing.Point(556, 402);
 			this.textBoxOriginalDRV.Name = "textBoxOriginalDRV";
-			this.textBoxOriginalDRV.Size = new System.Drawing.Size(165, 20);
+			this.textBoxOriginalDRV.Size = new System.Drawing.Size(189, 20);
 			this.textBoxOriginalDRV.TabIndex = 9;
 			// 
 			// textBoxRowState
 			// 
-			this.textBoxRowState.Location = new System.Drawing.Point(383, 461);
+			this.textBoxRowState.Location = new System.Drawing.Point(556, 461);
 			this.textBoxRowState.Name = "textBoxRowState";
-			this.textBoxRowState.Size = new System.Drawing.Size(165, 20);
+			this.textBoxRowState.Size = new System.Drawing.Size(189, 20);
 			this.textBoxRowState.TabIndex = 10;
+			// 
+			// labelCellCurrentValue
+			// 
+			this.labelCellCurrentValue.AutoSize = true;
+			this.labelCellCurrentValue.Location = new System.Drawing.Point(435, 380);
+			this.labelCellCurrentValue.Name = "labelCellCurrentValue";
+			this.labelCellCurrentValue.Size = new System.Drawing.Size(111, 13);
+			this.labelCellCurrentValue.TabIndex = 11;
+			this.labelCellCurrentValue.Text = "Внесите изменения:";
+			// 
+			// labelCellOriginalValue
+			// 
+			this.labelCellOriginalValue.AutoSize = true;
+			this.labelCellOriginalValue.Location = new System.Drawing.Point(435, 408);
+			this.labelCellOriginalValue.Name = "labelCellOriginalValue";
+			this.labelCellOriginalValue.Size = new System.Drawing.Size(109, 13);
+			this.labelCellOriginalValue.TabIndex = 12;
+			this.labelCellOriginalValue.Text = "Исходное значение:";
+			// 
+			// labelCurrentValue
+			// 
+			this.labelCurrentValue.AutoSize = true;
+			this.labelCurrentValue.Location = new System.Drawing.Point(435, 436);
+			this.labelCurrentValue.Name = "labelCurrentValue";
+			this.labelCurrentValue.Size = new System.Drawing.Size(105, 13);
+			this.labelCurrentValue.TabIndex = 13;
+			this.labelCurrentValue.Text = "Текущее значение:";
+			// 
+			// labelCellStatus
+			// 
+			this.labelCellStatus.AutoSize = true;
+			this.labelCellStatus.Location = new System.Drawing.Point(435, 464);
+			this.labelCellStatus.Name = "labelCellStatus";
+			this.labelCellStatus.Size = new System.Drawing.Size(102, 13);
+			this.labelCellStatus.TabIndex = 14;
+			this.labelCellStatus.Text = "Состояние ячейки:";
 			// 
 			// FormWorkingDataTable
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 562);
+			this.Controls.Add(this.labelCellStatus);
+			this.Controls.Add(this.labelCurrentValue);
+			this.Controls.Add(this.labelCellOriginalValue);
+			this.Controls.Add(this.labelCellCurrentValue);
 			this.Controls.Add(this.textBoxRowState);
 			this.Controls.Add(this.textBoxOriginalDRV);
 			this.Controls.Add(this.textBoxCurrentDRV);
@@ -311,6 +355,10 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 		private System.Windows.Forms.TextBox textBoxCurrentDRV;
 		private System.Windows.Forms.TextBox textBoxOriginalDRV;
 		private System.Windows.Forms.TextBox textBoxRowState;
+		private System.Windows.Forms.Label labelCellCurrentValue;
+		private System.Windows.Forms.Label labelCellOriginalValue;
+		private System.Windows.Forms.Label labelCurrentValue;
+		private System.Windows.Forms.Label labelCellStatus;
 	}
 }
 
