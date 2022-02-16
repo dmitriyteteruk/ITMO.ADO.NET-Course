@@ -252,6 +252,7 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 			// 
 			this.textBoxCurrentDRV.Location = new System.Drawing.Point(556, 431);
 			this.textBoxCurrentDRV.Name = "textBoxCurrentDRV";
+			this.textBoxCurrentDRV.ReadOnly = true;
 			this.textBoxCurrentDRV.Size = new System.Drawing.Size(189, 20);
 			this.textBoxCurrentDRV.TabIndex = 8;
 			// 
@@ -259,13 +260,16 @@ namespace ITMO.ADO.NET_Practice04_WorkingDataTable
 			// 
 			this.textBoxOriginalDRV.Location = new System.Drawing.Point(556, 402);
 			this.textBoxOriginalDRV.Name = "textBoxOriginalDRV";
+			this.textBoxOriginalDRV.ReadOnly = true;
 			this.textBoxOriginalDRV.Size = new System.Drawing.Size(189, 20);
 			this.textBoxOriginalDRV.TabIndex = 9;
+			this.textBoxOriginalDRV.Visible = false;
 			// 
 			// textBoxRowState
 			// 
 			this.textBoxRowState.Location = new System.Drawing.Point(556, 461);
 			this.textBoxRowState.Name = "textBoxRowState";
+			this.textBoxRowState.ReadOnly = true;
 			this.textBoxRowState.Size = new System.Drawing.Size(189, 20);
 			this.textBoxRowState.TabIndex = 10;
 			// 
