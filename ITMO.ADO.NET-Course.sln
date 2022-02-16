@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-04-Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04-WorkingDataTable", "ITMO.ADO.NET-Practice04-WorkingDataTable\ITMO.ADO.NET-Practice04-WorkingDataTable.csproj", "{91C5C969-76AE-4C97-AD1B-5DF9535F1CB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04-DataViewExample", "ITMO.ADO.NET-Practice04-DataViewExample\ITMO.ADO.NET-Practice04-DataViewExample.csproj", "{C0566CCD-4D31-4BED-A58D-74EECA9BD977}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{91C5C969-76AE-4C97-AD1B-5DF9535F1CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91C5C969-76AE-4C97-AD1B-5DF9535F1CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91C5C969-76AE-4C97-AD1B-5DF9535F1CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0566CCD-4D31-4BED-A58D-74EECA9BD977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0566CCD-4D31-4BED-A58D-74EECA9BD977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0566CCD-4D31-4BED-A58D-74EECA9BD977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0566CCD-4D31-4BED-A58D-74EECA9BD977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
