@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04-Wor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice04-DataViewExample", "ITMO.ADO.NET-Practice04-DataViewExample\ITMO.ADO.NET-Practice04-DataViewExample.csproj", "{C0566CCD-4D31-4BED-A58D-74EECA9BD977}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-5.1-DataSourcesWizard", "ITMO.ADO.NET-Practice-5.1-DataSourcesWizard\ITMO.ADO.NET-Practice-5.1-DataSourcesWizard.csproj", "{1FC49BC6-460E-46A3-B3D4-550E97E4A26A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{C0566CCD-4D31-4BED-A58D-74EECA9BD977}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0566CCD-4D31-4BED-A58D-74EECA9BD977}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0566CCD-4D31-4BED-A58D-74EECA9BD977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC49BC6-460E-46A3-B3D4-550E97E4A26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC49BC6-460E-46A3-B3D4-550E97E4A26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC49BC6-460E-46A3-B3D4-550E97E4A26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC49BC6-460E-46A3-B3D4-550E97E4A26A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
