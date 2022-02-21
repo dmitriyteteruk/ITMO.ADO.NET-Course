@@ -31,7 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-6.1-S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-6.2-LoadDataSetXml", "ITMO.ADO.NET-Practice-6.2-LoadDataSetXml\ITMO.ADO.NET-Practice-6.2-LoadDataSetXml.csproj", "{EF670241-1E95-4983-B150-BDD87B16BAAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-7.1-7.2-7.3-Linq_Student", "ITMO.ADO.NET-Practice-7.1-Linq_Student\ITMO.ADO.NET-Practice-7.1-7.2-7.3-Linq_Student.csproj", "{19CDE790-A9E5-4406-99D7-0EEFF90049D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITMO.ADO.NET-Practice-7.1-7.2-7.3-Linq_Student", "ITMO.ADO.NET-Practice-7.1-Linq_Student\ITMO.ADO.NET-Practice-7.1-7.2-7.3-Linq_Student.csproj", "{19CDE790-A9E5-4406-99D7-0EEFF90049D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-8.1-8.2-Linq2SQL", "ITMO.ADO.NET-Practice-8.1-Linq2SQL\ITMO.ADO.NET-Practice-8.1-8.2-Linq2SQL.csproj", "{6A46B605-DE32-4F88-ADD7-C64517FB60E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{19CDE790-A9E5-4406-99D7-0EEFF90049D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19CDE790-A9E5-4406-99D7-0EEFF90049D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19CDE790-A9E5-4406-99D7-0EEFF90049D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A46B605-DE32-4F88-ADD7-C64517FB60E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A46B605-DE32-4F88-ADD7-C64517FB60E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A46B605-DE32-4F88-ADD7-C64517FB60E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A46B605-DE32-4F88-ADD7-C64517FB60E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
