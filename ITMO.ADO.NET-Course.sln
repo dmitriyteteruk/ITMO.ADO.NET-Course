@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-8.1-8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-8.3-LINQsqlSproc", "ITMO.ADO.NET-Practice-8.3-LINQsqlSproc\ITMO.ADO.NET-Practice-8.3-LINQsqlSproc.csproj", "{A033DEB6-44F6-4220-8114-15587A75ABA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-8.4-LINQsqlM", "ITMO.ADO.NET-Practice-8.4-LINQsqlM\ITMO.ADO.NET-Practice-8.4-LINQsqlM.csproj", "{0AF47D9B-8AE5-427F-B0BB-599C4479161F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{A033DEB6-44F6-4220-8114-15587A75ABA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A033DEB6-44F6-4220-8114-15587A75ABA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A033DEB6-44F6-4220-8114-15587A75ABA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF47D9B-8AE5-427F-B0BB-599C4479161F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF47D9B-8AE5-427F-B0BB-599C4479161F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF47D9B-8AE5-427F-B0BB-599C4479161F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF47D9B-8AE5-427F-B0BB-599C4479161F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
