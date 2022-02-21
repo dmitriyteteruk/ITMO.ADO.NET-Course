@@ -29,17 +29,17 @@ namespace ITMO.ADO.NET_Practice_8._4_LINQsqlM
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Ten Most");
-			System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Unit Price");
 			this.buttonShowTop10 = new System.Windows.Forms.Button();
 			this.listView10Most = new System.Windows.Forms.ListView();
+			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SuspendLayout();
 			// 
 			// buttonShowTop10
 			// 
 			this.buttonShowTop10.Location = new System.Drawing.Point(13, 13);
 			this.buttonShowTop10.Name = "buttonShowTop10";
-			this.buttonShowTop10.Size = new System.Drawing.Size(236, 23);
+			this.buttonShowTop10.Size = new System.Drawing.Size(344, 23);
 			this.buttonShowTop10.TabIndex = 1;
 			this.buttonShowTop10.Text = "10 лучших";
 			this.buttonShowTop10.UseVisualStyleBackColor = true;
@@ -47,16 +47,26 @@ namespace ITMO.ADO.NET_Practice_8._4_LINQsqlM
 			// 
 			// listView10Most
 			// 
+			this.listView10Most.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
 			this.listView10Most.HideSelection = false;
-			this.listView10Most.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
 			this.listView10Most.Location = new System.Drawing.Point(13, 43);
 			this.listView10Most.Name = "listView10Most";
 			this.listView10Most.Size = new System.Drawing.Size(344, 395);
 			this.listView10Most.TabIndex = 2;
 			this.listView10Most.UseCompatibleStateImageBehavior = false;
-			this.listView10Most.View = System.Windows.Forms.View.Tile;
+			this.listView10Most.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "Ten Most";
+			this.columnHeader1.Width = 104;
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Unit Price";
+			this.columnHeader2.Width = 154;
 			// 
 			// LINQsqlM
 			// 
@@ -75,6 +85,8 @@ namespace ITMO.ADO.NET_Practice_8._4_LINQsqlM
 		#endregion
 		private System.Windows.Forms.Button buttonShowTop10;
 		private System.Windows.Forms.ListView listView10Most;
+		private System.Windows.Forms.ColumnHeader columnHeader1;
+		private System.Windows.Forms.ColumnHeader columnHeader2;
 	}
 }
 
