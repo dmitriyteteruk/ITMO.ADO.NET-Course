@@ -69,6 +69,7 @@ namespace ITMO.ADO.NET_Practice_8._1_Linq2SQL
 			{
 				db.GetTable<Customer>().DeleteOnSubmit(deleteIndivCust.First());
 				db.SubmitChanges();
+				
 			}
 			
 			MessageBox.Show("Объект удален из БД");

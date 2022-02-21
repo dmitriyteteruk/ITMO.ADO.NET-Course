@@ -24,7 +24,7 @@ namespace ITMO.ADO.NET_Practice_8._3_LINQsqlSproc
 		{
 			string param = textBoxOrderCode.Text;
 			var custquery = db.CustOrdersDetail(Convert.ToInt32(param));
-
+			
 
 			string msg = "";
 			foreach (CustOrdersDetailResult custOrdersDetail in custquery)
