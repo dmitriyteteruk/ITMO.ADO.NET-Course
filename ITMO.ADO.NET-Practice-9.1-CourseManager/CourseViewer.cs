@@ -24,7 +24,7 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 		{
 			schoolContext = new SchoolEntities();
 
-			var departments = from d in schoolContext.Department.Include("Courses") 
+			var departments = from d in schoolContext.Department.Include("Course") 
 							  orderby d.Name
 							  select d;
 			try
@@ -47,10 +47,10 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 				dataGridViewCourse.DataSource = department.Course.ToList();
 
 				dataGridViewCourse.Columns["Department"].Visible = false;
-				dataGridViewCourse.Columns["StudentGrades"].Visible = false;
+				dataGridViewCourse.Columns["StudentGrade"].Visible = false;
 				dataGridViewCourse.Columns["OnlineCourse"].Visible = false;
 				dataGridViewCourse.Columns["OnsiteCourse"].Visible = false;
-				dataGridViewCourse.Columns["People"].Visible = false;
+				dataGridViewCourse.Columns["Person"].Visible = false;
 				dataGridViewCourse.Columns["DepartmentId"].Visible = false;
 				dataGridViewCourse.AllowUserToDeleteRows = false;
 				dataGridViewCourse.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
