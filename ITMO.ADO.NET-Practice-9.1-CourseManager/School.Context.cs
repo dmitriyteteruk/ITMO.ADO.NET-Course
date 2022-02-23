@@ -29,7 +29,6 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
     
         public virtual DbSet<Course> Course { get; set; }
         public virtual DbSet<Department> Department { get; set; }
-        public virtual DbSet<OfficeAssignment> OfficeAssignment { get; set; }
         public virtual DbSet<OnlineCourse> OnlineCourse { get; set; }
         public virtual DbSet<OnsiteCourse> OnsiteCourse { get; set; }
         public virtual DbSet<Person> Person { get; set; }

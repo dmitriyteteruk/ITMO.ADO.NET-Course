@@ -33,6 +33,7 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			this.buttonCloseForm = new System.Windows.Forms.Button();
 			this.dataGridViewCourse = new System.Windows.Forms.DataGridView();
 			this.buttonSaveChanges = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourse)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -73,11 +74,22 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			this.buttonSaveChanges.UseVisualStyleBackColor = true;
 			this.buttonSaveChanges.Click += new System.EventHandler(this.buttonSaveChanges_Click);
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(9, 170);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(220, 23);
+			this.button1.TabIndex = 4;
+			this.button1.Text = "Показать офисы";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// CourseViewer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.buttonSaveChanges);
 			this.Controls.Add(this.dataGridViewCourse);
 			this.Controls.Add(this.buttonCloseForm);
@@ -96,6 +108,7 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 		private System.Windows.Forms.Button buttonCloseForm;
 		private System.Windows.Forms.DataGridView dataGridViewCourse;
 		private System.Windows.Forms.Button buttonSaveChanges;
+		private System.Windows.Forms.Button button1;
 	}
 }
 

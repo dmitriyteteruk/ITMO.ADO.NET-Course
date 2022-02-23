@@ -82,5 +82,11 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			this.Close();
 			schoolContext.Dispose();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			OfficeAssignment officeForm = new OfficeAssignment();
+			officeForm.Visible = true;
+		}
 	}
 }

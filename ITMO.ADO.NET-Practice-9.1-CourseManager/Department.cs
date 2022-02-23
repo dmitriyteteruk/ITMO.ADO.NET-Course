@@ -22,9 +22,6 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
     
         public int DepartmentID { get; set; }
         public string Name { get; set; }
-
-        public string Courses { get; set; }
-
         public decimal Budget { get; set; }
         public System.DateTime StartDate { get; set; }
         public Nullable<int> Administrator { get; set; }
