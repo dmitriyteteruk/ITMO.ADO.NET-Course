@@ -32,6 +32,7 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			this.comboBoxDepartmentList = new System.Windows.Forms.ComboBox();
 			this.buttonCloseForm = new System.Windows.Forms.Button();
 			this.dataGridViewCourse = new System.Windows.Forms.DataGridView();
+			this.buttonSaveChanges = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourse)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -46,12 +47,13 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			// 
 			// buttonCloseForm
 			// 
-			this.buttonCloseForm.Location = new System.Drawing.Point(9, 40);
+			this.buttonCloseForm.Location = new System.Drawing.Point(9, 140);
 			this.buttonCloseForm.Name = "buttonCloseForm";
 			this.buttonCloseForm.Size = new System.Drawing.Size(220, 23);
 			this.buttonCloseForm.TabIndex = 1;
 			this.buttonCloseForm.Text = "Закрыть";
 			this.buttonCloseForm.UseVisualStyleBackColor = true;
+			this.buttonCloseForm.Click += new System.EventHandler(this.buttonCloseForm_Click);
 			// 
 			// dataGridViewCourse
 			// 
@@ -61,11 +63,22 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			this.dataGridViewCourse.Size = new System.Drawing.Size(549, 150);
 			this.dataGridViewCourse.TabIndex = 2;
 			// 
+			// buttonSaveChanges
+			// 
+			this.buttonSaveChanges.Location = new System.Drawing.Point(9, 111);
+			this.buttonSaveChanges.Name = "buttonSaveChanges";
+			this.buttonSaveChanges.Size = new System.Drawing.Size(220, 23);
+			this.buttonSaveChanges.TabIndex = 3;
+			this.buttonSaveChanges.Text = "Обновить";
+			this.buttonSaveChanges.UseVisualStyleBackColor = true;
+			this.buttonSaveChanges.Click += new System.EventHandler(this.buttonSaveChanges_Click);
+			// 
 			// CourseViewer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.buttonSaveChanges);
 			this.Controls.Add(this.dataGridViewCourse);
 			this.Controls.Add(this.buttonCloseForm);
 			this.Controls.Add(this.comboBoxDepartmentList);
@@ -82,6 +95,7 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 		private System.Windows.Forms.ComboBox comboBoxDepartmentList;
 		private System.Windows.Forms.Button buttonCloseForm;
 		private System.Windows.Forms.DataGridView dataGridViewCourse;
+		private System.Windows.Forms.Button buttonSaveChanges;
 	}
 }
 

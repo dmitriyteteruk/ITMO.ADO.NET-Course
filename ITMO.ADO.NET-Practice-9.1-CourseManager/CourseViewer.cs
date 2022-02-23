@@ -45,20 +45,42 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 				Department department = (Department)this.comboBoxDepartmentList.SelectedItem;
 
 				dataGridViewCourse.DataSource = department.Course.ToList();
-
 				dataGridViewCourse.Columns["Department"].Visible = false;
 				dataGridViewCourse.Columns["StudentGrade"].Visible = false;
 				dataGridViewCourse.Columns["OnlineCourse"].Visible = false;
 				dataGridViewCourse.Columns["OnsiteCourse"].Visible = false;
 				dataGridViewCourse.Columns["Person"].Visible = false;
 				dataGridViewCourse.Columns["DepartmentId"].Visible = false;
-				dataGridViewCourse.AllowUserToDeleteRows = false;
+				dataGridViewCourse.AllowUserToDeleteRows = false; 
 				dataGridViewCourse.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+
+
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
+		}
+
+		private void buttonSaveChanges_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				schoolContext.SaveChanges();
+				MessageBox.Show("Changes saved to the database.");
+				this.Refresh();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void buttonCloseForm_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			schoolContext.Dispose();
 		}
 	}
 }
