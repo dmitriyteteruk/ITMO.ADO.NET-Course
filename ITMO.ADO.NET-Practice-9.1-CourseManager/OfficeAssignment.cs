@@ -27,8 +27,8 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			dataGridViewOffices.Columns["Timestamp"].Visible = false;
 			dataGridViewOffices.Columns["PersonID"].Visible = false;
 			dataGridViewOffices.Columns["EnrollmentDate"].Visible = false;
-			//dataGridViewOffices.Columns["StudentGrade"].Visible = false;
-			//dataGridViewOffices.Columns["Courses"].Visible = false;
+			dataGridViewOffices.Columns["StudentGrade"].Visible = false;
+			dataGridViewOffices.Columns["Course"].Visible = false;
 		}
 
 		private void buttonSaveChanges_Click(object sender, EventArgs e)
