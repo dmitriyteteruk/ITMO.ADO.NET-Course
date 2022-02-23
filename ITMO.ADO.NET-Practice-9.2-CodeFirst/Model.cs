@@ -31,6 +31,7 @@ namespace ITMO.ADO.NET_Practice_9._2_CodeFirst
     {
     }
 
+    [Table("VipOrders")]
     public class VipOrder : Order
     {
         public string status { get; set; }

@@ -1,6 +1,4 @@
-﻿// не работает "Реализация отношения «один ко многим»" стр 85 - не связываются заказы с заказчиками
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,14 +14,16 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 {
 	public partial class CustomerViewer : Form
 	{
-		SampleContext context = new SampleContext();
-		byte[] Ph; //
 
 		public CustomerViewer()
 		{
+			
 			InitializeComponent();
 			Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SampleContext>());
 		}
+
+		SampleContext context = new SampleContext();
+		byte[] Ph; //
 
 		private void Output() 
 			{ 
@@ -86,7 +86,8 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 
 		private void CustomerViewer_Load(object sender, EventArgs e)
 		{
-			{
+				
+
 				context.Orders.Add(new Order 
 					{ 
 						ProductName = "Аудио", 
@@ -105,12 +106,13 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 						ProductName = "Авто",
 						Quantity = 101, 
 						PurchaseDate = DateTime.Parse("10.01.2016"), 
-						status = "Высокий" });
+						status = "Высокий" 
+				});
 
 				context.SaveChanges(); 
 				
 				listBoxCustomerOrder.DataSource = context.Orders.ToList();
-			}
+			
 		}
 
 		private void dataGridViewDetails_CellClick(object sender, DataGridViewCellEventArgs e)
