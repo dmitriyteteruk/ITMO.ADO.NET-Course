@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-8.4-L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-9.1-CourseManager", "ITMO.ADO.NET-Practice-9.1-CourseManager\ITMO.ADO.NET-Practice-9.1-CourseManager.csproj", "{562D7DF2-2B6C-4216-A50A-F5AD97F4D0BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-9.2-CustomerManager", "ITMO.ADO.NET-Practice-9.2-CustomerManager\ITMO.ADO.NET-Practice-9.2-CustomerManager.csproj", "{51C308D8-5E7F-4012-8569-8B56BFE67CFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.ADO.NET-Practice-9.2-CodeFirst", "ITMO.ADO.NET-Practice-9.2-CodeFirst\ITMO.ADO.NET-Practice-9.2-CodeFirst.csproj", "{78429307-5EBC-4587-8796-44647EA73D2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{562D7DF2-2B6C-4216-A50A-F5AD97F4D0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{562D7DF2-2B6C-4216-A50A-F5AD97F4D0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{562D7DF2-2B6C-4216-A50A-F5AD97F4D0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C308D8-5E7F-4012-8569-8B56BFE67CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C308D8-5E7F-4012-8569-8B56BFE67CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C308D8-5E7F-4012-8569-8B56BFE67CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C308D8-5E7F-4012-8569-8B56BFE67CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78429307-5EBC-4587-8796-44647EA73D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78429307-5EBC-4587-8796-44647EA73D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78429307-5EBC-4587-8796-44647EA73D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78429307-5EBC-4587-8796-44647EA73D2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
