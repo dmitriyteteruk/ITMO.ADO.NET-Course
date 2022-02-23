@@ -17,6 +17,7 @@ namespace ITMO.ADO.NET_Practice_9._2_CodeFirst
         }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<VipOrder> VipOrders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,6 +29,11 @@ namespace ITMO.ADO.NET_Practice_9._2_CodeFirst
 
     public class Model
     {
+    }
+
+    public class VipOrder : Order
+    {
+        public string status { get; set; }
     }
 
     public class Customer

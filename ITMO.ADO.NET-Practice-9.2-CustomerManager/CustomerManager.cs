@@ -22,6 +22,7 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 		public CustomerViewer()
 		{
 			InitializeComponent();
+			Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SampleContext>());
 		}
 
 		private void Output() 
@@ -29,7 +30,10 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 				if (this.radioButtonCustomer.Checked == true)  
 					dataGridViewDetails.DataSource = context.Customers.ToList();
 				else if (this.radioButtonOrder.Checked == true) 
-					dataGridViewDetails.DataSource = context.Orders.ToList(); }
+					dataGridViewDetails.DataSource = context.Orders.ToList();
+				else if (this.radioButtonVipOrder.Checked == true)
+					dataGridViewDetails.DataSource = context.VipOrders.ToList();
+		}
 
 
 		private void buttonAddCustomerToDB_Click(object sender, EventArgs e)
@@ -94,8 +98,15 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 						ProductName = "Видео", 
 						Quantity = 22, 
 						PurchaseDate = DateTime.Parse("10.01.2016") 
-					}); 
-				
+					});
+
+				context.VipOrders.Add(new VipOrder 
+					{
+						ProductName = "Авто",
+						Quantity = 101, 
+						PurchaseDate = DateTime.Parse("10.01.2016"), 
+						status = "Высокий" });
+
 				context.SaveChanges(); 
 				
 				listBoxCustomerOrder.DataSource = context.Orders.ToList();
@@ -128,6 +139,7 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 			customer.Age = Int32.Parse(this.textBoxCustomerAge.Text);
 
 			context.Entry(customer).State = EntityState.Modified;
+			
 			context.SaveChanges(); 
 			Output();
 		}
@@ -135,10 +147,11 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 		private void buttonDeleteCustomerData_Click(object sender, EventArgs e)
 		{
 			if (labelId.Text == String.Empty) return;
+			
 			var id = Convert.ToInt32(labelId.Text); 
 			var customer = context.Customers.Find(id);
-			context.Entry(customer).State = EntityState.Deleted; 
 			
+			context.Entry(customer).State = EntityState.Deleted; 
 			context.SaveChanges(); 
 			Output();
 		}

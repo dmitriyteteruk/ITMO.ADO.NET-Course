@@ -36,8 +36,8 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 			this.buttonEditCustomerData = new System.Windows.Forms.Button();
 			this.buttonDeleteCustomerData = new System.Windows.Forms.Button();
 			this.groupBoxChooseData = new System.Windows.Forms.GroupBox();
-			this.radioButtonCustomer = new System.Windows.Forms.RadioButton();
 			this.radioButtonOrder = new System.Windows.Forms.RadioButton();
+			this.radioButtonCustomer = new System.Windows.Forms.RadioButton();
 			this.labelId = new System.Windows.Forms.Label();
 			this.textBoxCustomerId = new System.Windows.Forms.TextBox();
 			this.dataGridViewDetails = new System.Windows.Forms.DataGridView();
@@ -51,6 +51,7 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 			this.labelCustomerAddress = new System.Windows.Forms.Label();
 			this.labelCustomerSecondName = new System.Windows.Forms.Label();
 			this.labelCustomerFirstName = new System.Windows.Forms.Label();
+			this.radioButtonVipOrder = new System.Windows.Forms.RadioButton();
 			this.groupBoxChooseData.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetails)).BeginInit();
 			this.SuspendLayout();
@@ -114,6 +115,7 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 			// 
 			// groupBoxChooseData
 			// 
+			this.groupBoxChooseData.Controls.Add(this.radioButtonVipOrder);
 			this.groupBoxChooseData.Controls.Add(this.radioButtonOrder);
 			this.groupBoxChooseData.Controls.Add(this.radioButtonCustomer);
 			this.groupBoxChooseData.Location = new System.Drawing.Point(512, 101);
@@ -122,17 +124,6 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 			this.groupBoxChooseData.TabIndex = 7;
 			this.groupBoxChooseData.TabStop = false;
 			this.groupBoxChooseData.Text = "Выбор данных";
-			// 
-			// radioButtonCustomer
-			// 
-			this.radioButtonCustomer.AutoSize = true;
-			this.radioButtonCustomer.Location = new System.Drawing.Point(14, 23);
-			this.radioButtonCustomer.Name = "radioButtonCustomer";
-			this.radioButtonCustomer.Size = new System.Drawing.Size(69, 17);
-			this.radioButtonCustomer.TabIndex = 0;
-			this.radioButtonCustomer.TabStop = true;
-			this.radioButtonCustomer.Text = "Customer";
-			this.radioButtonCustomer.UseVisualStyleBackColor = true;
 			// 
 			// radioButtonOrder
 			// 
@@ -144,6 +135,17 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 			this.radioButtonOrder.TabStop = true;
 			this.radioButtonOrder.Text = "Order";
 			this.radioButtonOrder.UseVisualStyleBackColor = true;
+			// 
+			// radioButtonCustomer
+			// 
+			this.radioButtonCustomer.AutoSize = true;
+			this.radioButtonCustomer.Location = new System.Drawing.Point(14, 23);
+			this.radioButtonCustomer.Name = "radioButtonCustomer";
+			this.radioButtonCustomer.Size = new System.Drawing.Size(69, 17);
+			this.radioButtonCustomer.TabIndex = 0;
+			this.radioButtonCustomer.TabStop = true;
+			this.radioButtonCustomer.Text = "Customer";
+			this.radioButtonCustomer.UseVisualStyleBackColor = true;
 			// 
 			// labelId
 			// 
@@ -254,6 +256,17 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 			this.labelCustomerFirstName.TabIndex = 11;
 			this.labelCustomerFirstName.Text = "Имя";
 			// 
+			// radioButtonVipOrder
+			// 
+			this.radioButtonVipOrder.AutoSize = true;
+			this.radioButtonVipOrder.Location = new System.Drawing.Point(201, 23);
+			this.radioButtonVipOrder.Name = "radioButtonVipOrder";
+			this.radioButtonVipOrder.Size = new System.Drawing.Size(71, 17);
+			this.radioButtonVipOrder.TabIndex = 2;
+			this.radioButtonVipOrder.TabStop = true;
+			this.radioButtonVipOrder.Text = "VIP Order";
+			this.radioButtonVipOrder.UseVisualStyleBackColor = true;
+			// 
 			// CustomerViewer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +327,7 @@ namespace ITMO.ADO.NET_Practice_9._2_CustomerManager
 		private System.Windows.Forms.Label labelCustomerAddress;
 		private System.Windows.Forms.Label labelCustomerSecondName;
 		private System.Windows.Forms.Label labelCustomerFirstName;
+		private System.Windows.Forms.RadioButton radioButtonVipOrder;
 	}
 }
 
