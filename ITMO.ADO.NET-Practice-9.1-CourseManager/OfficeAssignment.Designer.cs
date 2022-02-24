@@ -60,7 +60,7 @@ namespace ITMO.ADO.NET_Practice_9._1_CourseManager
 			this.Controls.Add(this.buttonSaveChanges);
 			this.Controls.Add(this.dataGridViewOffices);
 			this.Name = "OfficeAssignment";
-			this.Text = "OfficeAssignment";
+			this.Text = "Упражнение 9.4. Сопоставление сущностей с несколькими таблицами";
 			this.Load += new System.EventHandler(this.OfficeAssignment_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewOffices)).EndInit();
 			this.ResumeLayout(false);
